@@ -1,0 +1,20 @@
+﻿@page
+@model ContactManagement.Pages.viewContactsModel
+@{
+}
+<div class="row">
+    @foreach (var res in Model.li)
+    {
+        <div class="col-md-4">
+            <img src=@res.Uimage height="100px" />
+            <div>@res.Contactid</div>
+            <div>@res.Firstname</div>
+            <div>@res.Lastname</div>
+            <div>@res.Mobileno</div>
+            <div>@res.Email</div>
+            <div><a class="btn btn-warning" asp-route-cid=@res.Contactid asp-page="deleteContact">Delete</a> <a class="btn btn-success" asp-route-cid=@res.Contactid  asp-page="editContact">Edit</a></div>
+
+
+        </div>
+    }
+</div>

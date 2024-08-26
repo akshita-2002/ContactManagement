@@ -1,0 +1,16 @@
+﻿@page
+@model ContactManagement.Pages.loginModel
+@{
+}
+
+<form method="post">
+    <input type="text" name="uname" class="form-control"/> <br />
+    <input type="text" name="pwd" class="form-control"/> <br/>
+    <input type="submit" value="Login"/>
+</form>
+
+
+<div class="btn btn-danger">
+    @Model.errormsg
+
+</div>

@@ -1,0 +1,22 @@
+﻿@page
+@model ContactManagement.Pages.AddContactModel
+@{
+}
+
+
+<form method="post">
+    <div style="width:500px;margin-left:300px">
+    <input type="text" name="Contactid" placeholder="enter contactid" class="form-control" />
+    <input type="text" name="Firstname" placeholder="enter FirstName" class="form-control" />
+    <input type="text" name="Lastname" placeholder="enter LastName" class="form-control" />
+    <input type="text" name="Mobileno" placeholder="enter MobileNo" class="form-control" />
+    <input type="text" name="Email" placeholder="enter Email" class="form-control" />
+    <input type="text" name="Uimage" placeholder="enter image" class="form-control" />
+    <input type="submit" name="Add Contact" class="btn btn-success"/>
+    </div>
+</form>
+
+
+<div style="background-color:steelblue;color:yellow">
+    @Model.result
+</div>

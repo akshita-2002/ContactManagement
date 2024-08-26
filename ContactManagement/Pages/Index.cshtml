@@ -1,0 +1,90 @@
+﻿@page
+@model ContactManagement.Pages.IndexModel
+@{
+}
+
+@{
+    <b><div style="background-color:tomato;color:yellow">@DateTime.Now</div></b>
+
+
+}
+
+@{
+    int a = 5;
+    int b = 10;
+    int c = a + b;
+    <b>the sum is @c</b>
+}
+
+
+@{
+
+    for(int i = 1; i < 10; i++)
+    {
+        if (i % 2 == 0)
+        {
+            <ul>
+              <li style="color:yellow">@i</li>
+            </ul>
+        }
+        else
+        {
+            <ul>
+            <li style="color:green">@i</li>
+            </ul>
+        }
+    }
+}
+
+@functions{
+    public string Addnums(int a,int b)
+    {
+        return "the sum is:" + (a + b);
+    }
+   
+}
+@Addnums(10,20);
+@Model.multiply(12,2);
+@Model.custname;
+
+<br/>
+<table border="1" bgcolor="orange" >
+<tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Marks</th>
+</tr>
+
+@foreach (var res in Model.li)
+{
+        
+        <tr bgcolor="lightblue">
+            <td>@res.sid</td>
+            <td>@res.name</td>
+            <td>@res.marks</td>
+        </tr>
+
+   
+   
+}
+</table>
+
+
+<form method="post">
+    <input type="text" name="txt1"/>
+    <input type="text" name="txt2"/>
+    <input type="submit" value="Addnumbers"/>
+
+</form>
+
+@Model.res
+
+
+
+<h1>Welcome to our site!</h1><hr />
+
+<div>
+
+    Some content goes here
+
+</div>

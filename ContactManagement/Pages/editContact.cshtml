@@ -1,0 +1,24 @@
+﻿@page
+@model ContactManagement.Pages.editContactModel
+@{
+}
+
+
+
+
+<form method="post">
+    <div style="width:500px;margin-left:300px">
+        <input type="text" name="COntactid" value="@Model.c.Contactid" class="form-control" /> <br />
+        <input type="text" name="Firstname" value="@Model.c.Firstname" class="form-control" /> <br />
+        <input type="text" name="Lastname" value="@Model.c.Lastname" class="form-control" /> <br />
+        <input type="text" name="Mobileno" value="@Model.c.Mobileno" class="form-control" /> <br />
+        <input type="text" name="Email" value="@Model.c.Email" class="form-control" /> <br />
+        <input type="text" name="Uimage" value="@Model.c.Uimage" class="form-control" /> <br />
+        <input type="submit" name="Update Contact" class="btn btn-success" />
+    </div>
+</form>
+
+
+<div style="background-color:steelblue;color:yellow">
+    @Model.result
+</div>
